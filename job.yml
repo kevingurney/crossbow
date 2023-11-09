@@ -1,0 +1,24 @@
+!Job
+target: !Target
+  head: a8f5599465ad70d4768da8615b300d9a17ea1a88
+  email: kgurney@mathworks.com
+  branch: matlab-packaging
+  remote: https://github.com/mathworks/arrow.git
+  github_repo: mathworks/arrow
+  version: 1.9.0.dev13233
+  r_version: 14.0.0.100013233
+  no_rc_version: 1.9.0.dev13233
+  no_rc_r_version: 14.0.0.100013233
+  no_rc_semver_version: 1.9.0-dev13233
+  no_rc_snapshot_version: 1.9.0-SNAPSHOT
+tasks:
+  matlab: !Task
+    name: matlab
+    ci: github
+    template: matlab/github.yml
+    artifacts: []
+    params: {}
+    branch: build-5-github-matlab
+    commit: d86ccf152cb6d297cf7f194fdd1bc69184da65ae
+params: {}
+branch: build-5
